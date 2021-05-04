@@ -1,0 +1,16 @@
+{:paths ["src"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.3"}}
+ :aliases
+ {:jar {:replace-deps {com.github.seancorfield/depstar {:mvn/version "2.0.211"}}
+        :exec-fn hf.depstar/jar
+        :exec-args {:jar "lib.klo.jar"
+                    :sync-pom true
+                    :aot true
+                    :compile-ns :all
+                    :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}}
+  :install {:replace-deps {slipset/deps-deploy {:mvn/version "0.1.5"}}
+            :exec-fn deps-deploy.deps-deploy/deploy
+            :exec-args {:installer :local :artifact "lib.klo.jar"}}
+  :deploy {:replace-deps {slipset/deps-deploy {:mvn/version "0.1.5"}}
+           :exec-fn deps-deploy.deps-deploy/deploy
+           :exec-args {:installer :remote :artifact "lib.klo.jar"}}}}
