@@ -1,5 +1,5 @@
-{:projectname "Clojure Introduction"
- :description "It's 2021 people.  Why aren't you programming in Clojure?  It's time. - Uncle Bob Martin"
+{:projectname "Interfacing Clojure and Kotlin"
+ :description "An example of using a library written in Clojure from Kotlin"
  :output-to "docs"
  :toc-filename "index.html"
  :include-readme true
