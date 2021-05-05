@@ -14,11 +14,12 @@
    by default it is empty (''). personally i would disencourage to use it,
    as we all recognize `-main` as mapping to `public static void main`
    
-   with the `:name` key one could also have the generated class have a name other than the current namespace"
+   the `:name` key makes the generated class have a name other than the current namespace"
   (:require [clojure.pprint :refer [print-table]])
   (:import (java.util List Map)
            (java.util.function Function))
   (:gen-class
+   :name cckc.lib.Klo
    :methods [^{:static true}
              [funky [java.util.List java.util.function.Function]
               java.util.Map]

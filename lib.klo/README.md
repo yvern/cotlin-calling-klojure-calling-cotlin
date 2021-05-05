@@ -50,3 +50,7 @@ You can use it from Gradle (kotlin DSL) as:
 ```kotlin
 implementation("net.clojars.cckc:lib.klo:0.1.0-SNAPSHOT")
 ```
+
+## Note
+One does not usually include clojure itself as a depency in a library, but since we need the clojure stdlib at runtime (as one also does for kotlin or scala), I decided to add the dependency on the clojure side, so we dont need to add it to the gradle file, and the kotlin consumer can just not worry about it.
+If we instead had many libraries/jars, it would be beneficial to "link dynamically" and add it to the gradle config intead
