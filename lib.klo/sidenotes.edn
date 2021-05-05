@@ -1,0 +1,6 @@
+{:projectname "Clojure Introduction"
+ :description "It's 2021 people.  Why aren't you programming in Clojure?  It's time. - Uncle Bob Martin"
+ :output-to "docs"
+ :toc-filename "index.html"
+ :include-readme true
+ :theme "sidenotes"}
